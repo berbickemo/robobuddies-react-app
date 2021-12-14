@@ -1,21 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Card from './Card';
+import CardList from './CardList' //which is a parent of the Card component
 //imported card component and created it in the main folder
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 //to add different names to the cards we need properties
 import { robots } from './robots'
 //when imports and exports are not default we have to destructure them {name, second name...}
-//we imported robots.js in which there is an object with different names and data about robots
+//we imported robots.js in which there is an array of objects with different names and data about robots
 ReactDOM.render(
-              <div>
-              <Card id={robots[0].id} name={robots[0].name} email={robots[0].email} />
-              <Card id={robots[1].id} name={robots[1].name} email={robots[1].email} />
-              <Card id={robots[2].id} name={robots[2].name} email={robots[2].email} />
-              
-              </div>
+              <CardList robots={robots} />
               //nothing has changed because fn Card in card.js needs to accept the parameters
 
 ,document.getElementById('root'))
