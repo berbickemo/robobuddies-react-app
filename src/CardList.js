@@ -1,6 +1,7 @@
 import React from "react";
 import Card from './Card'
 
+
 const CardList = ({robots}) => {
     //to avoid problems while adding a loop we need to add key prop
     const cardsArray = robots.map((user, i) => {
